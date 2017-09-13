@@ -1,9 +1,9 @@
 version: '3'
 services:
   frontend:
-    image: 'gtd_front:0.1.1'
+    image: 'brainburns/gtd-frontend:0.1.1'
   backend:
-    image: 'gtd_back:0.1.2'
+    image: 'brainburns/gtd-backend:0.1.2'
     env_file:
       - ~/back_env.list
     # ports:
