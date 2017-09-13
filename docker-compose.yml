@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    image: 'gtd_front:0.1.1'
+  backend:
+    image: 'gtd_back:0.1.2'
+    env_file:
+      - ~/back_env.list
+    # ports:
+    #   - "8081:8080"
+    # links:
+      # - "frontend:frontend"
+  nginx:
+    image: 'nginx'
+    volumes: 
+      - "./nginx_config:/etc/nginx"
+    # links:
+      # - "frontend:front"
+      # - "backend:back"
+    ports:
+      - "80:80"
