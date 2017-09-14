@@ -14,7 +14,7 @@ services:
     image: 'nginx'
     volumes: 
       - "./nginx_config:/etc/nginx"
-      - "~/cert:/etc/cert__"
+      - "~/cert:/etc/nginx/cert"
     # links:
       # - "frontend:front"
       # - "backend:back"
